@@ -11,10 +11,24 @@ const apiPictures = "https://lanciweb.github.io/demo/api/pictures/";
 
 //eseguo la fetch Api
 
-// loop for per avere tutti gli oggetti e poter lavorare sul singolo
+fetch(apiPictures)
+  .then((response) => response.json())
+  .then((data) => {
+    console.log(data);
 
-// destrutturo per ottenere date, title ed url
+    // inizializzo la variabile dove andrò ad inserire il markup literal
+    let cardMarkup = "";
+    // loop forEach per avere tutti gli oggetti e poter lavorare sul singolo
+    data.forEach((photo) => {
+      // destrutturo per ottenere date, title ed url
+      const { title, date, url } = photo;
+      console.log(title, date, url);
+      // creo markup literal in cui inserire date, title ed url.
+      const photoMarkup = ``;
 
-// creo markup literal in cui inserire date, title ed url.
+      // quando sarà tutto pronto
+      //cardMarkup += photoMarkup
+    });
 
-//aggiungo il markup alla DOM
+    //aggiungo il markup alla DOM
+  });
