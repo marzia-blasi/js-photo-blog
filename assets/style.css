@@ -3,9 +3,16 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+  border: solid;
 }
 
 /* #region class utilities */
+
+.container {
+  width: 95%;
+  max-width: 480px;
+  margin: auto;
+}
 
 :root {
   --header-bg: url("./img/wall.png");
@@ -14,9 +21,6 @@
 
 .d-flex {
   display: flex;
-}
-
-.text-center {
 }
 
 /* #endregion class utilities */
@@ -30,6 +34,7 @@ header {
   font-style: italic;
   font-size: 2rem;
 
+  /*eventualemnte potrebbe essere una classe da portare fuori dopo vediamo*/
   .text-center {
     justify-content: center;
   }
@@ -42,4 +47,78 @@ main {
   font-optical-sizing: auto;
 
   font-style: italic;
+}
+
+/*Griglia*/
+
+.card {
+  width: auto;
+  height: 300px;
+  background-color: aqua;
+}
+
+.row {
+  flex-wrap: wrap;
+}
+
+.col-1 {
+  width: calc(100% / 12 * 1);
+}
+
+.col-2 {
+  width: calc(100% / 12 * 2);
+}
+
+.col-3 {
+  width: calc(100% / 12 * 3);
+}
+
+.col-4 {
+  width: calc(100% / 12 * 4);
+}
+
+.col-5 {
+  width: calc(100% / 12 * 5);
+}
+
+.col-6 {
+  width: 50%;
+}
+
+.col-7 {
+  width: calc(100% / 12 * 7);
+}
+
+.col-8 {
+  width: calc(100% / 12 * 8);
+}
+
+.col-9 {
+  width: calc(100% / 12 * 9);
+}
+
+.col-10 {
+  width: calc(100% / 12 * 10);
+}
+
+.col-11 {
+  width: calc(100% / 12 * 11);
+}
+
+.col-12 {
+  width: 100%;
+}
+
+/*Medium breakpoint*/
+@media screen and (min-width: 768px) {
+  .col-sm-6 {
+    width: 50%;
+  }
+}
+
+/*large breakpoint*/
+@media screen and (min-width: 992px) {
+  .col-lg-3 {
+    width: calc(100% / 12 * 3);
+  }
 }
