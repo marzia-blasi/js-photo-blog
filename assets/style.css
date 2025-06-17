@@ -1,3 +1,30 @@
-body {
-  background-color: aqua;
+/* Reset  */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  --header-bg: url("./img/wall.png");
+  --main-bg: url("./img/cork.png");
+}
+
+/* header */
+header {
+  background-image: var(--header-bg);
+  height: 150px; /*l'altezza è sempre uguale*/
+  font-family: "Sometype Mono", monospace;
+  font-optical-sizing: auto;
+  font-weight: <weight>;
+  font-style: normal;
+}
+
+/* main non mi fa vedere l'immagine non so perchè */
+main {
+  background-color: var(--main-bg);
+  font-family: "Edu TAS Beginner", cursive;
+  font-optical-sizing: auto;
+  font-weight: <weight>;
+  font-style: normal;
 }
