@@ -24,7 +24,16 @@ fetch(apiPictures)
       const { title, date, url } = photo;
       console.log(title, date, url);
       // creo markup literal in cui inserire date, title ed url.
-      const photoMarkup = ``;
+      const photoMarkup = `<div class="col-12 col-sm-6 col-lg-3">
+              <div class="card d-flex bg-white">
+                <img
+                  src="./assets/img/aster_angelica_Zig.jpg"
+                  alt="foto vacanza"
+                />
+                <div class="title">prova</div>
+                <div class="data">25/01/25</div>
+              </div>
+            </div>`;
 
       // quando sarà tutto pronto
       //cardMarkup += photoMarkup
@@ -32,3 +41,13 @@ fetch(apiPictures)
 
     //aggiungo il markup alla DOM
   });
+
+/*
+<div class="col-12 col-sm-6 col-lg-3">
+  <div class="card d-flex bg-white">
+    <img src="./assets/img/aster_angelica_Zig.jpg" alt="foto vacanza" />
+    <div class="title">prova</div>
+    <div class="data">25/01/25</div>
+  </div>
+</div>;
+*/

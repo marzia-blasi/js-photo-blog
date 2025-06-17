@@ -10,7 +10,7 @@
 
 .container {
   width: 95%;
-  max-width: 480px;
+  /* max-width: 480px;*/
   margin: auto;
 }
 
@@ -45,21 +45,20 @@ header {
   }
 }
 
-/* main non mi fa vedere l'immagine non so perchè */
+/* main  */
 main {
   background-image: var(--main-bg);
   font-family: "Edu TAS Beginner", cursive;
   font-optical-sizing: auto;
-
   font-style: italic;
 }
 
 /*Griglia*/
 
 .card {
-  width: auto;
+  width: 100%;
   height: auto;
-  background-color: #ffffff;
+  padding-top: 18px;
   flex-wrap: wrap;
   flex-direction: column;
   align-content: center;
@@ -70,6 +69,9 @@ main {
   gap: 10px;
 }
 
+.bg-white {
+  background-color: #ffffff;
+}
 .col-12 {
   width: 100%;
 }
