@@ -3,7 +3,6 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  border: solid;
 }
 
 /* #region class utilities */
@@ -43,6 +42,10 @@ header {
   .text-center {
     justify-content: center;
   }
+
+  h1 {
+    padding-top: 25px;
+  }
 }
 
 /* main  */
@@ -51,6 +54,7 @@ main {
   font-family: "Edu TAS Beginner", cursive;
   font-optical-sizing: auto;
   font-style: italic;
+  padding-top: 100px;
 }
 
 /*Griglia*/
@@ -67,6 +71,7 @@ main {
 .row {
   flex-wrap: wrap;
   gap: 10px;
+  justify-content: center;
 }
 
 .bg-white {
@@ -74,10 +79,19 @@ main {
 }
 .col-12 {
   width: 100%;
+  max-width: 300px;
 }
 
 /*Medium breakpoint*/
 @media screen and (min-width: 768px) {
+  .container {
+    max-width: 90%;
+    margin: 0 auto;
+  }
+
+  .card {
+    width: 100%;
+  }
   .col-sm-6 {
     width: 50%;
   }
@@ -85,7 +99,13 @@ main {
 
 /*large breakpoint*/
 @media screen and (min-width: 992px) {
+  .card {
+    width: 100%;
+  }
+
   .col-lg-3 {
     width: calc(100% / 12 * 3);
   }
 }
+
+/*1244 funziona tutto bene :(*/

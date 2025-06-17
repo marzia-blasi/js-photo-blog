@@ -6,7 +6,7 @@ Inseriamo un foglio JavaScript ed effettuiamo una chiamata AJAX all’API, sfrut
 const apiPictures = "https://lanciweb.github.io/demo/api/pictures/";
 
 // recupero i nodi che mi servono per inserire il tamplate literal
-
+const rowEl = document.querySelector(".row");
 // devo recuperare come dati: date, title ed url.
 
 //eseguo la fetch Api
@@ -27,19 +27,20 @@ fetch(apiPictures)
       const photoMarkup = `<div class="col-12 col-sm-6 col-lg-3">
               <div class="card d-flex bg-white">
                 <img
-                  src="./assets/img/aster_angelica_Zig.jpg"
+                  src="${url}"
                   alt="foto vacanza"
                 />
-                <div class="title">prova</div>
-                <div class="data">25/01/25</div>
+                <div class="title">${title}</div>
+                <div class="data">${date}</div>
               </div>
             </div>`;
 
       // quando sarà tutto pronto
-      //cardMarkup += photoMarkup
+      cardMarkup += photoMarkup;
     });
 
     //aggiungo il markup alla DOM
+    rowEl.innerHTML = cardMarkup;
   });
 
 /*
