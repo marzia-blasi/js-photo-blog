@@ -7,8 +7,10 @@ const apiPictures = "https://lanciweb.github.io/demo/api/pictures/";
 
 // recupero i nodi che mi servono per inserire il tamplate literal
 const rowEl = document.querySelector(".row");
+const overlay = document.getElementById("overlay");
 // devo recuperare come dati: date, title ed url.
 let cardMarkup = "";
+let imgMarkup = "";
 //eseguo la fetch Api
 
 fetch(apiPictures)
@@ -22,7 +24,7 @@ fetch(apiPictures)
     data.forEach((photo) => {
       // destrutturo per ottenere date, title ed url
       const { title, date, url } = photo;
-      console.log(title, date, url);
+      //console.log(title, date, url);
       // creo markup literal in cui inserire date, title ed url.
       const photoMarkup = `<div class="col-12 col-sm-6 col-lg-3">
               <div class="card d-flex bg-white">
@@ -37,23 +39,31 @@ fetch(apiPictures)
 
       // quando sarà tutto pronto
       cardMarkup += photoMarkup;
+
+      //TL per l'overlay delle foto
+      // const photoOverlay = `<img src="${url}" alt="foto vacanze" />      <button>Chiudi!</button>`; NO
+      // console.log(photoOverlay);
+
+      // imgMarkup += photoOverlay; NO
     });
 
     //aggiungo il markup alla DOM
     rowEl.innerHTML = cardMarkup;
 
+    //immagini nell'overlay
+    // overlay.innerHTML = imgMarkup; NO
     // elementi della dom
 
     // per attivate l'overlay
     //const card = document.querySelector(".card");
     const cards = document.querySelectorAll(".card");
     console.log(cards);
-    const overlay = document.getElementById("overlay");
+    // const overlay = document.getElementById("overlay");
 
     // per chiudere l'overlay
     const button = document.querySelector("button");
 
-    console.log(button, overlay);
+    // console.log(button, overlay);
 
     for (let i = 0; i < cards.length; i++) {
       const card = cards[i];
@@ -61,13 +71,20 @@ fetch(apiPictures)
 
       // eventListener click vorrei che li ci fosse card
       card.addEventListener("click", () => {
-        overlayLogic(overlay);
+        overlayLogic(card);
       });
     }
     // logica della funzione " fai sparire la classe d- none"
 
     function overlayLogic(node) {
-      node.style.display = "block";
+      const img_element = document.createElement("img");
+      img_element.setAttribute(
+        "src",
+        node.querySelector("img").getAttribute("src")
+      );
+
+      overlay.appendChild(img_element);
+      overlay.style.display = "block";
       console.log(node);
     }
     // clikko su button (rimetti classe d-none?)
