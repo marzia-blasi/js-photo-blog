@@ -48,7 +48,6 @@ fetch(apiPictures)
     //const card = document.querySelector(".card");
     const cards = document.querySelectorAll(".card");
     console.log(cards);
-
     const overlay = document.getElementById("overlay");
 
     // per chiudere l'overlay
@@ -56,10 +55,15 @@ fetch(apiPictures)
 
     console.log(button, overlay);
 
-    // eventListener click vorrei che li ci fosse card
-    card.addEventListener("click", () => {
-      overlayLogic(overlay);
-    });
+    for (let i = 0; i < cards.length; i++) {
+      const card = cards[i];
+      console.log(card);
+
+      // eventListener click vorrei che li ci fosse card
+      card.addEventListener("click", () => {
+        overlayLogic(overlay);
+      });
+    }
     // logica della funzione " fai sparire la classe d- none"
     // e se aggiungessi IF clikko su button (rimetti classe d-none?)
 
