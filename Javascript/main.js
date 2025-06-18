@@ -51,4 +51,12 @@ fetch(apiPictures)
     <div class="data">25/01/25</div>
   </div>
 </div>;
+
+
+Milestone 1
+Facciamo in modo di creare un overlay che copra l’intera pagina e all’interno, centrata, disponiamo un’immagine qualunque ed un button di chiusura.
+Milestone 2
+Facciamo sparire l’overlay con l’aiuto di una classe CSS che imposti il display: none .
+Dopodiché facciamo sì che cliccando una qualunque foto. L’overlay ricompaia.
+Cliccando invece il button di chiusura, l’overlay scompare nuovamente.
 */
