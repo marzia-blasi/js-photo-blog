@@ -26,7 +26,7 @@ fetch(apiPictures)
       // creo markup literal in cui inserire date, title ed url.
       const photoMarkup = `<div class="col-12 col-sm-6 col-lg-3">
               <div class="card d-flex bg-white">
-                <img
+                <img class="img-style"
                   src="${url}"
                   alt="foto vacanza"
                 />
@@ -65,20 +65,19 @@ fetch(apiPictures)
       });
     }
     // logica della funzione " fai sparire la classe d- none"
-    // e se aggiungessi IF clikko su button (rimetti classe d-none?)
 
     function overlayLogic(node) {
       node.style.display = "block";
       console.log(node);
     }
+    // clikko su button (rimetti classe d-none?)
 
     button.addEventListener("click", () => {
       overlay.style.display = "none";
     });
-
     //display: none;
 
-    // stampare in pagina il risultato
+    // posso implementare le foto sempre tramite il TL ?
   });
 
 /*
