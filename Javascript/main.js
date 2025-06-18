@@ -43,23 +43,27 @@ fetch(apiPictures)
     rowEl.innerHTML = cardMarkup;
 
     // elementi della dom
+
+    // per attivate l'overlay
     const card = document.querySelector(".card");
 
+    const overlay = document.getElementById("overlay");
+
+    // per chiudere l'overlay
     const button = document.querySelector("button");
 
-    // selezionare elemento che contiene la classe d-none o direttamente la classe ?
-
-    console.log(card, button);
+    console.log(card, button, overlay);
 
     // eventListener click vorrei che li ci fosse card
-
-    card.addEventListener("click", myFunction);
-
+    card.addEventListener("click", overlayLogic(overlay));
     // logica della funzione " fai sparire la classe d- none"
 
-    function overlayLogic(params) {
-      // cosa devo aggiungere qui? .style.visibility = "visible";
+    function overlayLogic(node) {
+      node.style.display = "block";
+      console.log(node);
     }
+
+    //display: none;
 
     // stampare in pagina il risultato
   });
