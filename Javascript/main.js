@@ -74,7 +74,7 @@ fetch(apiPictures)
         overlayLogic(card);
       });
     }
-    // logica della funzione " fai sparire la classe d- none"
+    // logica della funzione " fai sparire la classe d-none"
 
     function overlayLogic(node) {
       const img_element = document.createElement("img");
