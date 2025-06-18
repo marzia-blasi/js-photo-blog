@@ -8,7 +8,7 @@ const apiPictures = "https://lanciweb.github.io/demo/api/pictures/";
 // recupero i nodi che mi servono per inserire il tamplate literal
 const rowEl = document.querySelector(".row");
 // devo recuperare come dati: date, title ed url.
-
+let cardMarkup = "";
 //eseguo la fetch Api
 
 fetch(apiPictures)
@@ -17,7 +17,7 @@ fetch(apiPictures)
     console.log(data);
 
     // inizializzo la variabile dove andrò ad inserire il markup literal
-    let cardMarkup = "";
+
     // loop forEach per avere tutti gli oggetti e poter lavorare sul singolo
     data.forEach((photo) => {
       // destrutturo per ottenere date, title ed url
@@ -41,6 +41,27 @@ fetch(apiPictures)
 
     //aggiungo il markup alla DOM
     rowEl.innerHTML = cardMarkup;
+
+    // elementi della dom
+    const card = document.querySelector(".card");
+
+    const button = document.querySelector("button");
+
+    // selezionare elemento che contiene la classe d-none o direttamente la classe ?
+
+    console.log(card, button);
+
+    // eventListener click vorrei che li ci fosse card
+
+    card.addEventListener("click", myFunction);
+
+    // logica della funzione " fai sparire la classe d- none"
+
+    function overlayLogic(params) {
+      // cosa devo aggiungere qui? .style.visibility = "visible";
+    }
+
+    // stampare in pagina il risultato
   });
 
 /*
@@ -67,8 +88,4 @@ Cliccando invece il button di chiusura, l’overlay scompare nuovamente.
 
 // ho bisgon di:
 
-// elementi della dom
-
-// eventListener click
-
-// stampare in pagina il risultato
+// problema, è possibile selezionare un elemneto che viene inserito con il template literal ?
