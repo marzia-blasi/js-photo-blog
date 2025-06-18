@@ -45,18 +45,23 @@ fetch(apiPictures)
     // elementi della dom
 
     // per attivate l'overlay
-    const card = document.querySelector(".card");
+    //const card = document.querySelector(".card");
+    const cards = document.querySelectorAll(".card");
+    console.log(cards);
 
     const overlay = document.getElementById("overlay");
 
     // per chiudere l'overlay
     const button = document.querySelector("button");
 
-    console.log(card, button, overlay);
+    console.log(button, overlay);
 
     // eventListener click vorrei che li ci fosse card
-    card.addEventListener("click", overlayLogic(overlay));
+    card.addEventListener("click", () => {
+      overlayLogic(overlay);
+    });
     // logica della funzione " fai sparire la classe d- none"
+    // e se aggiungessi IF clikko su button (rimetti classe d-none?)
 
     function overlayLogic(node) {
       node.style.display = "block";
@@ -84,7 +89,7 @@ Milestone 2
 Facciamo sparire l’overlay con l’aiuto di una classe CSS che imposti il display: none .
 Dopodiché facciamo sì che cliccando una qualunque foto. L’overlay ricompaia.
 Cliccando invece il button di chiusura, l’overlay scompare nuovamente.
-*/
+
 
 //quando "click" su una foto
 
@@ -93,3 +98,6 @@ Cliccando invece il button di chiusura, l’overlay scompare nuovamente.
 // ho bisgon di:
 
 // problema, è possibile selezionare un elemneto che viene inserito con il template literal ?
+
+Milestone 3
+Inseriamo il pezzo di logica finale: quando una foto viene cliccata, dobbiamo fare in modo che sia proprio quella foto a essere mostrata all’interno dell’overlay.*/
