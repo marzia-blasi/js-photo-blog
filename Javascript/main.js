@@ -60,3 +60,15 @@ Facciamo sparire l’overlay con l’aiuto di una classe CSS che imposti il disp
 Dopodiché facciamo sì che cliccando una qualunque foto. L’overlay ricompaia.
 Cliccando invece il button di chiusura, l’overlay scompare nuovamente.
 */
+
+//quando "click" su una foto
+
+// allora sparisce display: none - deve esssere una classe a parte altrimenti non ci posso laorare !
+
+// ho bisgon di:
+
+// elementi della dom
+
+// eventListener click
+
+// stampare in pagina il risultato

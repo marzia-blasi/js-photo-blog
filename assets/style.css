@@ -7,6 +7,10 @@
 
 /* #region class utilities */
 
+.d-none {
+  display: none; /* overlay */
+}
+
 .container {
   width: 95%;
   /* max-width: 480px;*/
@@ -84,7 +88,7 @@ main {
 
 #overlay {
   position: fixed; /* Sit on top of the page content */
-  /* display: none;  Hidden by default */
+
   width: 100%; /* Full width (cover the whole page) */
   height: 100%; /* Full height (cover the whole page) */
   top: 0;
