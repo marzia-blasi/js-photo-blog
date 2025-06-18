@@ -72,6 +72,10 @@ fetch(apiPictures)
       console.log(node);
     }
 
+    button.addEventListener("click", () => {
+      overlay.style.display = "none";
+    });
+
     //display: none;
 
     // stampare in pagina il risultato
